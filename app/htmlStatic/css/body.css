@@ -1,0 +1,70 @@
+
+
+
+/* -------------------------------------------------------------------------- */
+/* Apply to whole page or container */
+body, html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;              /* Firefox */
+  scrollbar-color: var(--color-box-dark) var(--color-box-light);      /* Firefox */
+  overscroll-behavior: contain;       /* Prevent scroll chaining */
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*  Body */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-back);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+    /* All Nav Div  */
+    & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+body, li, ul, div {
+    margin: 0;
+    padding: 0;
+    margin-block: 0;
+    margin-inline: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    margin-block: .3em;
+    margin-inline: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+
+section {
+    width: 100%;
+}
+
+hr {
+    width: 90%;
+}
+
+pre {
+    text-align: left;
+    margin-block: 0;
+    margin-inline: 0;
+}

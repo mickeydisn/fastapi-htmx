@@ -1,0 +1,21 @@
+### How to install :
+
+`
+python -m venv myenv 
+.\myenv\Scripts\activate 
+pip install fastapi uvicorn pip
+install -r requirements.txt
+`
+
+### How to Run :
+
+`
+.\myenv\Scripts\activate
+uvicorn app.main:app --reload
+`
+
+#### Prower Shell :
+
+`> Kill process:
+Get-Process | Where-Object { $_.ProcessName -like "python*" } 
+ Stop-Process -Id XXXX -Force`

@@ -1,0 +1,106 @@
+@import url("./css/color.css");
+@import url("./css/body.css");
+@import url("./css/article.css");
+@import url("./css/markdown.css");
+@import url("./css/utils.css");
+
+
+/* -------------------------------------------------------------------------- */
+/*  Body Nav */
+
+#nav-left,
+#nav-center,
+#nav-right {
+    overflow-y: scroll;
+    height: 100vh;
+
+    & > :last-child {
+        margin-bottom: 5em;
+    }
+}
+
+
+#nav-left,
+#nav-center > #nav-content,
+#nav-right {
+    display: grid;
+    align-content: flex-start;
+    justify-items: stretch;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+
+}
+
+#nav-left {
+    padding: 1em 1em 1em .3em;
+    width: calc(30vw - 1.3em);
+    font-size: .9em;
+}
+
+#nav-center {
+    width: 70vw;
+
+    & #nav-content {
+        width: 96%;
+        margin-right: 2%;
+    }
+}
+
+#nav-right {
+    display: none;
+    width: 3vw;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*  CHART */
+
+.chart-container {
+    display: grid;
+    row-gap: 10px;
+    align-items: end;
+    background: var(--color-box-light);
+    border-left: 2px solid var(--color-box);
+    border-bottom: 2px solid var(--color-box);
+    padding: 10px;
+
+    & > li.partitionDetailElement {
+        display: flex;
+        font-size: 14px;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: var(--color-box-light);
+    }
+
+    & > li.partitionRowElement {
+        
+        display: grid;
+        grid-template-columns: 200px 40px 80px 1fr;
+        column-gap: 0px;
+
+        & > div {
+            color: #000;
+            display: flex;
+            font-size: 14px;
+            align-items: center;
+        }
+
+        & > div.barValue {
+            justify-content:flex-end;
+            padding-right:5px;
+            border-right:1px solid var(--color-back-dark);
+            border-bottom:1px solid var(--color-back-dark);
+        }
+        & > div.barValueChar {
+            display: grid;
+            width: 100%;
+
+            & > div {
+                height: .8em;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Include HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Highlight.js  ( Color code in markdown)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Chat.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Chat.js -->
+    <script src="./js/htmx_event.js" defer></script>
+
+</head>
+<body>
+    <div id="nav-left">
+        <h2>Navigation</h2>
+
+
+        <!------------------------------>
+        <HR>
+        <section>
+            <H1>Demo</H1>
+        </section>
+        <article 
+            hx-get="/htmx_exemple/menu/template" 
+            hx-trigger="click" 
+            hx-swap="outerHTML">
+            <label><h2> My Template </h2></label>
+        </article>
+        <article 
+            hx-get="/htmx_exemple/menu" 
+            hx-trigger="click" 
+            hx-swap="outerHTML">
+            <label><h2> My Interface Doccument </h2></label>
+        </article>
+        <!---->
+
+
+    </div>
+    <div id="nav-center">
+        <h1>Welcome to My FastAPI HTML Server!</h1>
+        <div id="nav-content">
+
+        <!-- --------------------------------------------------------->
+        <!-- --------------------------------------------------------->
+        
+        <!-- --------------------------------------------------------->
+        <!-- --------------------------------------------------------->
+        <div id="chart-container run-script">
+            <canvas id="myChartb74c39bc-22d0-4c3d-9f28-69bf2c8e653d"></canvas>
+            
+            <script type="text/javascript">
+                const ctx = document.getElementById('myChartb74c39bc-22d0-4c3d-9f28-69bf2c8e653d').getContext('2d');
+                const myChart = new Chart(ctx, 
+                {
+                    "type": "bar",
+                    "data": {
+                        "labels": [
+                            "2024-01-01",
+                            "2024-02-01",
+                            "2024-03-01"
+                        ],
+                        "datasets": [
+                        {
+                            "label": "sales",
+                            "data": [
+                                100,
+                                120,
+                                140
+                            ],
+                            "type": "bar",
+                            "backgroundColor": "rgba(54, 162, 235, 0.5)",
+                            "borderColor": "rgba(54, 162, 235, 1)",
+                            "borderWidth": 1
+                        },
+                        {
+                            "label": "revenue",
+                            "data": [
+                                200,
+                                240,
+                                300
+                            ],
+                            "type": "line",
+                            "backgroundColor": "rgba(54, 162, 235, 0.5)",
+                            "borderColor": "rgba(54, 162, 235, 1)",
+                            "borderWidth": 1
+                        },
+                        {
+                            "label": "sales",
+                            "data": [
+                                50,
+                                60,
+                                80
+                            ],
+                            "type": "line",
+                            "fill": true,
+                            "backgroundColor": "rgba(54, 162, 235, 0.5)",
+                            "borderColor": "rgba(54, 162, 235, 1)",
+                            "borderWidth": 1
+                        },
+                        {
+                            "label": "profit",
+                            "data": [
+                                100,
+                                120,
+                                140
+                            ],
+                            "type": "line",
+                            "borderDash": [5, 5],
+                            "borderColor": "rgba(255, 99, 132, 1)",
+                            "tension": 0.3
+                        }
+                        ]
+                    },
+                    "options": {
+                        "responsive": true,
+                        "interaction": {
+                        "mode": "index",
+                        "intersect": false
+                        },
+                        "scales": {
+                            "x": {
+                                "title": {
+                                "display": true,
+                                "text": "date"
+                                },
+                                "stacked": false
+                            },
+                            "y": {
+                                "stacked": false,
+                                "title": {
+                                "display": true,
+                                "text": "Values"
+                                }
+                            }
+                        }
+                    }
+                }/**/);
+            </script>
+        </div>
+        
+
+        <! ----------------------------------------------------------->
+        <!----------------------------------------------------------->
+        </div>
+    </div>
+    <div id="nav-right">
+
+    </div>
+
+</body>
+</html>

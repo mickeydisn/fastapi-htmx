@@ -1,0 +1,123 @@
+
+/* -------------------------------------------------------------------------- */
+/*  Content Markdown */
+
+
+.markdown,
+.markdown-loaded {
+    background-color: var(--color-box-light);
+    border: 1px solid #000;
+    display: block;
+
+    p, pre {
+        margin: .5rem 0 .5rem .5rem;
+    }
+
+    & ul {
+        display: block;
+        margin: 0 0 0 2rem;
+    }
+    & li {
+        display: list-item;
+        unicode-bidi: isolate;
+        margin: .2rem 0 .2rem 0;
+    }
+
+
+    h1, h2, h3, h4, h5 {
+        padding: .1rem 0 .1rem .4rem;
+        margin: 2rem 0 1rem 0;
+        &:nth-child(1) {
+            margin-top: 1rem;
+    } 
+
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        font-weight: 900;
+    }
+    h2 {
+        margin-left: 1rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    h3 {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+    h4 {
+        margin-left: 1.3rem;
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+
+    blockquote {
+        font-weight: 600;
+        color: var(--color-box);
+    }
+
+    em {
+        color: var(--color-box-light);
+        padding: 0 .1em;
+    }
+    strong {
+        color: var(--color-box);
+        padding: 0 .1em;
+    }
+    code {
+        font-size: 1.2em;
+        color: var(--color-text-light);
+        padding: 0 .1em;
+    }
+
+    table {
+        border: 2px solid var(--color-box-dark);
+        margin: .4rem 0;
+    }
+    td, th {
+        padding: .4rem .8rem;
+    }
+
+    th {
+        background-color: var(--color-box-dark);
+    } 
+
+    tr:nth-child(2n) {
+        background-color: var(--color-box);
+    } 
+
+    code.hljs {
+        font-size: .9rem;
+    }
+
+    /* */
+
+    & > h1{
+        background-color: var(--color-box-dark);
+        color:  var(--color-text-light);
+        box-shadow: -5px -5px 0px 0px var(--color-box);
+    }
+    & > h2 {
+        background-color: var(--color-back-light);
+        color:  var(--color-back-dark);
+        box-shadow: -5px -5px 0px 0px var(--color-box);
+    }
+    & > h3{
+        background-color: var(--color-box);
+        color:  var(--color-back-dark);
+        box-shadow: -5px -5px 0px 0px var(--color-box);
+    }
+    & > h4 {
+        background-color: var(--color-back-dark);
+        color:  var(--color-box-light);
+        box-shadow: -5px -5px 0px 0px var(--color-box);
+    }
+    & > h5 {
+        background-color: none;
+        color:  var(--color-back-light);
+        box-shadow: -5px -5px 0px 0px var(--color-box);
+    }
+
+}    

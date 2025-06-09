@@ -1,0 +1,174 @@
+/* -------------------------------------------------------------------------- */
+/*  Article */
+
+article {
+
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    width: 100%;
+
+    & > label {
+        display: block;
+    }
+   
+    & label > button {
+      cursor: pointer;
+    }
+
+    & section,
+    & div {
+        display: grid;
+        align-content: flex-start;
+        grid-template-columns: 1fr;
+    }
+    & div {
+        gap:0;
+        margin-top:0;
+        margin-bottom:0;
+    }
+    & section {
+        gap:.2em;
+        margin-top:.5;
+        margin-bottom:.5em;
+    }
+
+}
+
+article, section {
+
+    & > h1, 
+    & > h2, 
+    & > h3, 
+    & > h4, 
+    & > h5, 
+    & > label > h1, 
+    & > label > h2,
+    & > label > h3,
+    & > label > h4,
+    & > label > h5  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5em;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Color */
+
+article {
+
+    &:has(> label > h1) {
+        background-color: var(--color-back-dark);
+    }
+    &:has(> label > h2) {
+        background-color: var(--color-back);
+    }
+    &:has(> label > h3) {
+        background-color: var(--color-back-light);
+    }
+    &:has(> label > h4) {
+        background-color: var(--color-back-light);
+    }
+}
+
+article, section {
+    /* H1 Labek */
+    & > h1, & > label:has(> h1) {
+        background-color: var(--color-box-dark);
+        color:  var(--color-text-light);
+    }
+    & > h2, & > label:has(h2) {
+        background-color: var(--color-back-light);
+        color:  var(--color-back-dark);
+    }
+    & > h3, & > label:has(h3) {
+        background-color: var(--color-box);
+        color:  var(--color-back-dark);
+    }
+    & > h4, & > label:has(h4) {
+        background-color: var(--color-back-dark);
+        color:  var(--color-box-light);
+    }
+    & > h5, & > label:has(h5) {
+        background-color: none;
+        color:  var(--color-back-light);
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*  Content Article */
+#nav-content article {
+
+    & > section {
+        width: 96%;
+        margin-left: 4%;
+        gap:.5em;
+        margin-top:0;
+        margin-bottom:1em;
+
+        & > div,
+        & > p {
+            background-color: var(--color-back-dark);
+            color:var(--color-text-light)
+        }
+        & > p {
+            padding:.5em;
+        }
+    }
+
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*  MENU Article */
+#nav-left article {
+    border-left: 5px solid var(--color-back-dark);
+    width: calc(100% - 5px);
+
+    & > label {
+        border: none;
+    }
+
+    & > section {
+        width: 98%;
+        margin-left: 2%;
+        gap:.5em;
+        margin-top:0;
+        margin-bottom:1em;
+    }
+
+    /*
+    &:has(> label > h1) > section {
+        gap:1em;
+        margin-top:1em;
+        margin-bottom:1em;
+    }
+    */
+    & section:has(> label > h4) {
+        gap:.5em;
+        margin-top:.5em;
+        margin-bottom:.5em;
+    }
+
+
+    & label:has(> h4) {
+        /* background-color: var(--color-back-dark); */
+        color: var(--color-box-light);
+        border-radius: 2em 0 0 2em;
+        font-family: sans-serif;
+        font-size: .8em;
+        border-bottom: 1px solid;
+        padding: 0;
+        padding-left: .5em;
+
+        & > h4 {
+            padding: .3em .3em;
+        }
+    }
+
+}

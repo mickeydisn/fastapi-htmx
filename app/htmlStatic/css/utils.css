@@ -1,0 +1,76 @@
+
+/* -------------------------------------------------------------------------- */
+/*  Toggle */
+
+.toggle {
+
+    > label {
+        cursor: pointer;
+    }
+
+    & .toggleContent {
+        display: none !important;
+    }
+
+    & input.toggleDetail  {
+        display: none !important;
+    }
+    & input.toggleDetail:checked ~ .toggleContent {
+        display: grid !important;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Icone */
+
+.icone {
+    border-radius: 100%;
+    vertical-align: center;
+    justify-content: center;
+    display: flex;
+}
+#nav-left .icone {
+    font-size: 1.7em;
+    margin: -.3em -.3em -.3em .4em;
+    background-color: var(--color-box);
+}
+#nav-content .icone {
+    font-size: 1rem;
+    margin-left: .2rem;
+    padding: .4em;
+    background-color: var(--color-back-dark);
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Hover */
+
+.hover {
+    box-shadow: 0 0 0 inset var(--color-box-light);
+    box-shadow: 0 0 0 var(--color-box-light);
+    transition: box-shadow 100ms;
+    /* Hover — fast inner glow */
+    &:hover {
+        box-shadow: 0 0 1em .3em inset var(--color-box-dark);
+        box-shadow: 0 0 .5em .1em var(--color-box-dark);
+        transition: box-shadow 200ms;
+        z-index: 100;
+    }
+}
+
+
+.hover-active {
+    box-shadow: 0 0 0 inset var(--color-box-light);
+    transition: box-shadow 100ms;
+    /* Hover — fast inner glow */
+    &:hover {
+        box-shadow: 0 0 1em .3em inset var(--color-box-dark);
+        box-shadow: 0 0 .5em .1em var(--color-box-dark);
+        transition: box-shadow 100ms;
+    }
+    /* Active — fast both inner and outer glow */
+    &:active {
+        box-shadow: 0 0 0 1em inset var(--color-box-dark);
+        box-shadow: 0 0 3em 2em var(--color-box-dark);
+        transition: box-shadow 50ms;
+    }
+}
