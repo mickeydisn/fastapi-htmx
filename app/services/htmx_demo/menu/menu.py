@@ -36,9 +36,10 @@ def htmlHtmxExmple_menu():
             {'name': 'Exemple 3 - Sub Section', 'url': '/htmx_exemple/content_h3'},
         ],
         "Component" : [
-            {'name': 'Exemple 4 - Exemple Component MD', 'url': '/htmx_exemple/content_h4'},
+            {'name': 'Component MD', 'url': '/htmx_exemple/component_md'},
+            {'name': 'Component Chart', 'url': '/htmx_exemple/component_chart'},
+            {'name': 'Component Panda Chart', 'url': '/htmx_exemple/component_panda_chart'},
         ], 
-
     }
     return htmlMenuH1_Group("GroupMenu", groupItem, True)
 
@@ -52,7 +53,6 @@ def htmlHtmxExmple_menu_tree():
             {'name': 'ItemA', 'url': '/htmx_exemple/content_h1'},
             {'name': 'ItemA', 'url': '/htmx_exemple/content_h1'},
         ], 
-
     }
     treeItem = {
         "Tree1": groupItem,

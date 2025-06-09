@@ -13,7 +13,9 @@ from app.services.htmx_demo.menu.menu import htmlHtmxExmple_menu_tree
 
 from app.services.htmx_demo.article.exemple1 import htmlH1_Exemple1
 from app.services.htmx_demo.article.exemple2 import htmlH1_Exemple2
-from app.services.htmx_demo.article.exemple_component import htmlH1_Exemple_Component
+from app.services.htmx_demo.article.exemple_component import htmlHtmxExmple_component_md
+from app.services.htmx_demo.article.exemple_component import htmlHtmxExmple_component_chat
+from app.services.htmx_demo.article.exemple_component import htmlHtmxExmple_component_panda_chat
 
 from app.services.htmx_demo.article.content import htmlH1_Exemple3
 
@@ -44,9 +46,15 @@ async def get_content_h2():
 async def get_content_h3():
     return htmlH1_Exemple3()
 
-@router.get("/htmx_exemple/content_h4",  response_class=HTMLResponse)
+@router.get("/htmx_exemple/component_md",  response_class=HTMLResponse)
 async def get_content_h4():
-    return htmlH1_Exemple_Component()
+    return htmlHtmxExmple_component_md()
+@router.get("/htmx_exemple/component_chart",  response_class=HTMLResponse)
+async def get_content_h4():
+    return htmlHtmxExmple_component_chat()
+@router.get("/htmx_exemple/component_panda_chart",  response_class=HTMLResponse)
+async def get_content_h4():
+    return htmlHtmxExmple_component_panda_chat()
 
 
 # Fake in-memory DB

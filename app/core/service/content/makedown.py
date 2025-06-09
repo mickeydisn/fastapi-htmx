@@ -1,6 +1,7 @@
 import uuid
 import json
 import inspect
+
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
 
@@ -29,3 +30,72 @@ def htmlContentMDHtml(str):
 
 def htmlContentMDJson(mjson):
     return htmlContentMD(f"```htlm\n{json.dumps(mjson, indent=2)}\n```")
+
+
+
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+def htmlContentMD_exemple():
+    md =  f"""
+# Hello Work
+## Hello Work
+### Hello Work
+#### Hello Work
+
+> i'm fine thanks,
+
+_Cool_ : 
+
+ - What ? 
+ - *How ?*  
+ - **How ?**  
+ - ***How ?***  
+ - _Better_ ?_
+ - __Better__ ?
+ - ___Better___ ?
+ - code :  `and inlin code`  ?
+ - ~~The world is flat.~~
+ 
+Check ? 
+ - [x] Write the press release
+ - [ ] Update the website
+ - [ ] Contact the media
+
+-----
+
+```
+and multiline inlin 
+code
+is possible ?
+```
+
+-----
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+
+-----
+
+
+```json
+{{
+    "Home": "Is Home",
+    "Space": "Is Empty"
+}}
+```
+-----
+
+</div>"""
+
+    return htmlContentMD(md)
+
+
+

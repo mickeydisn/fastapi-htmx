@@ -39,13 +39,16 @@ def _content_Custom():
 
 def _content_Label():
     return """
-    <H1> H1 Hello Word - Outside Content div ( padding + color ) </H1>
-    <H2> H2 Hello Word - Outside Content div ( padding + color ) </H2>
-    <H3> H3 Hello Word - Outside Content div ( padding + color ) </H3>
-    <H4> H4 Hello Word - Outside Content div ( padding + color ) </H4>
+    <H1> H1 Hello Word - Outside Content div  </H1>
+    <H2> H2 Hello Word - Outside Content div  </H2>
+    <H3> H3 Hello Word - Outside Content div  </H3>
+    <H4> H4 Hello Word - Outside Content div  </H4>
     <hr>
     <div>
-        <H1> H1 Hello Word - inside a Content ( No color + No panning) </H1>
+        <H1> H1 Hello Word - inside a Content </H1>
+        <H2> H2 Hello Word - inside a Content </H2>
+        <H3> H3 Hello Word - inside a Content </H3>
+        <H4> H4 Hello Word - inside a Content </H4>
     </div>
     """
 

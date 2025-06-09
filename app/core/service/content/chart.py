@@ -12,6 +12,9 @@ def htmlContentChart(chartConf):
             <canvas id="myChart{uid}"></canvas>
             <script type="text/javascript">
                {{
+                Chart.defaults.borderColor = 'hsla(204, 20%, 23%, 90%)';
+                Chart.defaults.color = '#FFF';
+
                 const ctx = document.getElementById('myChart{uid}').getContext('2d');
                 const myChart = new Chart(ctx, {json.dumps(chartConf)});
                 }}
@@ -19,6 +22,8 @@ def htmlContentChart(chartConf):
         </div>
         """
 
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 def htmlContentChart_exemple():
     chart_config = {

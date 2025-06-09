@@ -116,6 +116,8 @@ def htmlContentPandaChartTimeSerie(df: pd.DataFrame, axe_index: str, series: lis
 
     return htmlContentChart(chart_config) 
 
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 
 def htmlContentPandaChartTimeSerie_exemple():
